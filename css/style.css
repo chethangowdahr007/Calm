@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* body {
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  color: black;
+} */
+#everything {
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  color: black;
+}
+#everything-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#center-content {
+  height: 15%;
+}
+h1 {
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+#top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+#weather {
+  font-size: 1.2rem;
+}
+#weather:hover + #timezone {
+  visibility: visible;
+  opacity: 1;
+
+  transition-delay: 0s;
+}
+#timezone {
+  font-style: italic;
+  font-size: 1.1rem;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+#input-field {
+  transform: scale(1.1);
+  transition: all 0.2s ease-out;
+}
+#input-field:hover {
+  transform: scale(1.3);
+  transition: all 0.2s ease-out;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#date {
+  font-style: italic;
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+#time {
+  font-size: 8rem;
+}
+
+/* adding hover effect on time to show date */
+#time:hover + #date {
+  /* display: block;
+  -webkit-animation: fadeIn 2s; */
+  visibility: visible;
+  opacity: 1;
+
+  transition-delay: 0s;
+}
+
+/* hover effect for quote and author */
+#quote {
+  position: absolute;
+  /* margin-left: -155px; */
+  bottom: 5px;
+  font-style: italic;
+  font-size: 1.5rem;
+  transition: bottom ease 0.5s;
+  height: -100vh;
+  width: 50vw;
+  float: left;
+}
+#quote:hover {
+  bottom: 30px;
+}
+
+#author {
+  position: absolute;
+  bottom: 0px;
+  font-style: italic;
+  font-size: 1rem;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+#quote:hover + #author {
+  /* height: -10px; */
+  visibility: visible;
+  opacity: 1;
+
+  transition-delay: 0s;
+}
+
+/* 
+
+
+
+ */
+
+/* button dropdown   */
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.dropbtn:hover {
+  transform: scale(1.2);
+  transition: all 0.2s ease-out;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980b9;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  top: 5px;
+  left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 45px;
+  left: 5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+  /* transform: scale(1.2);
+  transition: all 0.2s ease-out; */
+}
+
+.show {
+  display: block;
+}
+
+/* h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+} */
+@media (max-width: 700px) {
+  #time {
+    font-size: 6rem;
+  }
+}
+
+/* quicksand-regular - latin */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/quicksand-v19-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/quicksand-v19-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/quicksand-v19-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/quicksand-v19-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/quicksand-v19-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/quicksand-v19-latin-regular.svg#Quicksand") format("svg"); /* Legacy iOS */
+}
